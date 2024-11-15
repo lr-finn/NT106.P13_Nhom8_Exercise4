@@ -59,24 +59,44 @@ namespace GoogleBooks
         {
             dgvBooks.Rows.Clear();
 
-            // Phân tích JSON để lấy thông tin sách
             JObject data = JObject.Parse(jsonResponse);
             var items = data["items"];
             if (items != null)
             {
                 foreach (var item in items)
                 {
+                    string bookId = item["id"]?.ToString() ?? "Không rõ";  // Lấy BookID
                     string title = item["volumeInfo"]["title"]?.ToString() ?? "Không rõ";
                     string authors = item["volumeInfo"]["authors"]?.ToString() ?? "Không rõ";
                     string description = item["volumeInfo"]["description"]?.ToString() ?? "Không có mô tả";
 
-                    // Thêm sách vào DataGridView
-                    dgvBooks.Rows.Add(title, authors, description);
+                    // Thêm BookID và sách vào DataGridView
+                    dgvBooks.Rows.Add(bookId, title, authors, description);
                 }
             }
             else
             {
                 MessageBox.Show("Không tìm thấy sách nào phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvBooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Lấy BookID từ hàng được chọn
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[0].Value?.ToString() ?? string.Empty;
+
+                // Mở Form2 và truyền BookID
+                if (!string.IsNullOrEmpty(bookId))
+                {
+                    Form2 form2 = new Form2(bookId);
+                    form2.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Không có BookID để lấy thông tin chi tiết.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

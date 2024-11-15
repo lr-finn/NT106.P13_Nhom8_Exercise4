@@ -31,6 +31,7 @@
             this.rtbBookDetails = new System.Windows.Forms.RichTextBox();
             this.btnAddToShelf = new System.Windows.Forms.Button();
             this.btnRemoveFromShelf = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // rtbBookDetails
@@ -59,16 +60,25 @@
             this.btnRemoveFromShelf.Text = "Xoa khoi ke sach";
             this.btnRemoveFromShelf.UseVisualStyleBackColor = true;
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(428, 456);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(380, 33);
+            this.progressBar.TabIndex = 3;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 537);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnRemoveFromShelf);
             this.Controls.Add(this.btnAddToShelf);
             this.Controls.Add(this.rtbBookDetails);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }
@@ -78,5 +88,6 @@
         private System.Windows.Forms.RichTextBox rtbBookDetails;
         private System.Windows.Forms.Button btnAddToShelf;
         private System.Windows.Forms.Button btnRemoveFromShelf;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

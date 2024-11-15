@@ -31,13 +31,14 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAuthors = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDecription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCreateBookshelf = new System.Windows.Forms.Button();
             this.txtBookshelfTitle = new System.Windows.Forms.TextBox();
             this.txtBookshelfDescription = new System.Windows.Forms.TextBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAuthors = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDecription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@
             this.dgvBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.ColumnName,
             this.ColumnAuthors,
             this.ColumnDecription});
@@ -74,6 +76,35 @@
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBooks.Size = new System.Drawing.Size(1177, 374);
             this.dgvBooks.TabIndex = 2;
+            this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 125;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "Ten Sach";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Width = 250;
+            // 
+            // ColumnAuthors
+            // 
+            this.ColumnAuthors.HeaderText = "Tac Gia";
+            this.ColumnAuthors.MinimumWidth = 6;
+            this.ColumnAuthors.Name = "ColumnAuthors";
+            this.ColumnAuthors.Width = 150;
+            // 
+            // ColumnDecription
+            // 
+            this.ColumnDecription.HeaderText = "Mo ta";
+            this.ColumnDecription.MinimumWidth = 6;
+            this.ColumnDecription.Name = "ColumnDecription";
+            this.ColumnDecription.Width = 400;
             // 
             // btnCreateBookshelf
             // 
@@ -105,27 +136,6 @@
             this.progressBar.Size = new System.Drawing.Size(989, 23);
             this.progressBar.TabIndex = 6;
             // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Ten Sach";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Width = 250;
-            // 
-            // ColumnAuthors
-            // 
-            this.ColumnAuthors.HeaderText = "Tac Gia";
-            this.ColumnAuthors.MinimumWidth = 6;
-            this.ColumnAuthors.Name = "ColumnAuthors";
-            this.ColumnAuthors.Width = 150;
-            // 
-            // ColumnDecription
-            // 
-            this.ColumnDecription.HeaderText = "Mo ta";
-            this.ColumnDecription.MinimumWidth = 6;
-            this.ColumnDecription.Name = "ColumnDecription";
-            this.ColumnDecription.Width = 400;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -155,6 +165,7 @@
         private System.Windows.Forms.TextBox txtBookshelfTitle;
         private System.Windows.Forms.TextBox txtBookshelfDescription;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAuthors;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDecription;
