@@ -34,7 +34,10 @@
             this.btnCreateBookshelf = new System.Windows.Forms.Button();
             this.txtBookshelfTitle = new System.Windows.Forms.TextBox();
             this.txtBookshelfDescription = new System.Windows.Forms.TextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAuthors = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDecription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +56,22 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Tim kiem";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvBooks
             // 
+            this.dgvBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnName,
+            this.ColumnAuthors,
+            this.ColumnDecription});
             this.dgvBooks.Location = new System.Drawing.Point(12, 151);
+            this.dgvBooks.MultiSelect = false;
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.RowHeadersWidth = 51;
             this.dgvBooks.RowTemplate.Height = 24;
+            this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBooks.Size = new System.Drawing.Size(1177, 374);
             this.dgvBooks.TabIndex = 2;
             // 
@@ -87,19 +98,40 @@
             this.txtBookshelfDescription.Size = new System.Drawing.Size(230, 22);
             this.txtBookshelfDescription.TabIndex = 5;
             // 
-            // progressBar1
+            // progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(101, 531);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(989, 23);
-            this.progressBar1.TabIndex = 6;
+            this.progressBar.Location = new System.Drawing.Point(101, 531);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(989, 23);
+            this.progressBar.TabIndex = 6;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "Ten Sach";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Width = 250;
+            // 
+            // ColumnAuthors
+            // 
+            this.ColumnAuthors.HeaderText = "Tac Gia";
+            this.ColumnAuthors.MinimumWidth = 6;
+            this.ColumnAuthors.Name = "ColumnAuthors";
+            this.ColumnAuthors.Width = 150;
+            // 
+            // ColumnDecription
+            // 
+            this.ColumnDecription.HeaderText = "Mo ta";
+            this.ColumnDecription.MinimumWidth = 6;
+            this.ColumnDecription.Name = "ColumnDecription";
+            this.ColumnDecription.Width = 400;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 566);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.txtBookshelfDescription);
             this.Controls.Add(this.txtBookshelfTitle);
             this.Controls.Add(this.btnCreateBookshelf);
@@ -122,7 +154,10 @@
         private System.Windows.Forms.Button btnCreateBookshelf;
         private System.Windows.Forms.TextBox txtBookshelfTitle;
         private System.Windows.Forms.TextBox txtBookshelfDescription;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAuthors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDecription;
     }
 }
 
