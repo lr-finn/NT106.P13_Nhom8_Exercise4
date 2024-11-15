@@ -5,3 +5,5 @@
 /.vs
 /GoogleBooks/.vs/GoogleBooks
 /GoogleBooks/GoogleBooks/obj/Debug
+/GoogleBooks/GoogleBooks/bin/Debug
+/GoogleBooks/packages
