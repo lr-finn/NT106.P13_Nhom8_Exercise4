@@ -7,3 +7,7 @@
 /GoogleBooks/GoogleBooks/obj/Debug
 /GoogleBooks/GoogleBooks/bin/Debug
 /GoogleBooks/packages
+obj/
+bin/
+.vs/
+/packages
