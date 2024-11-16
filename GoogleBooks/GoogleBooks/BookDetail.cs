@@ -15,11 +15,11 @@ using System.Text.RegularExpressions;
 
 namespace GoogleBooks
 {
-    public partial class Form2 : Form
+    public partial class BookDetail : Form
     {
         private HttpClient httpClient;
         private string bookID;
-        public Form2(string bookID)
+        public BookDetail(string bookID)
         {
             InitializeComponent();
             this.bookID = bookID;
@@ -112,5 +112,8 @@ namespace GoogleBooks
                 rtbBookDetails.Text = "Không tìm thấy thông tin chi tiết của sách.";
             }
         }
+
+       
+
     }
 }

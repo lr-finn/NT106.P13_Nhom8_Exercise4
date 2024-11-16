@@ -7,11 +7,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GoogleBooks
 {
-    public partial class Form1 : Form
+    public partial class TimSach : Form
     {
-        private static readonly string apiKey = "AIzaSyCcKcLfXBpRCmv4pzhdl-sDmd1ktse8rDo";
+        private static readonly string apiKey = "AIzaSyCoK2Cy7VtrzSxy4HVuqZztELNbRueyiZc";
         private static readonly string apiUrl = "https://www.googleapis.com/books/v1/volumes?q=";
-        public Form1()
+        public TimSach()
         {
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace GoogleBooks
                 // Mở Form2 và truyền BookID
                 if (!string.IsNullOrEmpty(bookId))
                 {
-                    Form2 form2 = new Form2(bookId);
+                    InfoSach form2 = new InfoSach(bookId);
                     form2.ShowDialog();
                 }
                 else

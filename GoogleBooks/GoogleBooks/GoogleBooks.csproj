@@ -65,25 +65,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BookshelvesDto.cs" />
+    <Compile Include="ListBooksInShelf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ListBooksInShelf.Designer.cs">
+      <DependentUpon>ListBooksInShelf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="TimSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="TimSach.Designer.cs">
+      <DependentUpon>TimSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoSach.Designer.cs">
+      <DependentUpon>InfoSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="TimSach.resx">
+      <DependentUpon>TimSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="InfoSach.resx">
+      <DependentUpon>InfoSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

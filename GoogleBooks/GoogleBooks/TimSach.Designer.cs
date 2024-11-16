@@ -1,6 +1,6 @@
 ﻿namespace GoogleBooks
 {
-    partial class Form1
+    partial class TimSach
     {
         /// <summary>
         /// Required designer variable.
