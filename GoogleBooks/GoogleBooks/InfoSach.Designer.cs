@@ -76,6 +76,7 @@
             this.dgvBookShelves.RowTemplate.Height = 24;
             this.dgvBookShelves.Size = new System.Drawing.Size(975, 266);
             this.dgvBookShelves.TabIndex = 4;
+            this.dgvBookShelves.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBookShelves_CellDoubleClick);
             // 
             // Column3
             // 

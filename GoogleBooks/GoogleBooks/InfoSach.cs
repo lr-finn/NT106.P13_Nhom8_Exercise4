@@ -259,5 +259,24 @@ namespace GoogleBooks
             }
         }
 
+        private void dgvBookShelves_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //Lấy Bookshelf ID từ dòng được chọn
+                var selectedRow = dgvBookShelves.Rows[e.RowIndex];
+                string shelfId = selectedRow.Cells["ShelfId"].Value?.ToString();
+                if (!string.IsNullOrEmpty(shelfId))
+                {
+                    ListBooksInShelf listBooksInShelf = new ListBooksInShelf(shelfId);
+                    listBooksInShelf.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể lấy ID của kệ sách được chọn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
     }
 }

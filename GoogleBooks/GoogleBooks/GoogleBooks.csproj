@@ -86,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ListBooksInShelf.resx">
+      <DependentUpon>ListBooksInShelf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TimSach.resx">
       <DependentUpon>TimSach.cs</DependentUpon>
     </EmbeddedResource>
