@@ -45,7 +45,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvBooksInShelf.Location = new System.Drawing.Point(5, 7);
+            this.dgvBooksInShelf.Location = new System.Drawing.Point(5, 11);
             this.dgvBooksInShelf.Name = "dgvBooksInShelf";
             this.dgvBooksInShelf.RowHeadersWidth = 51;
             this.dgvBooksInShelf.RowTemplate.Height = 24;
@@ -82,19 +82,22 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnXoa.Font = new System.Drawing.Font("UTM Avo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(334, 317);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(288, 62);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa khỏi kệ";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // ListBooksInShelf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 393);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(961, 393);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.dgvBooksInShelf);
             this.Name = "ListBooksInShelf";

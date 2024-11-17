@@ -40,27 +40,30 @@
             // 
             // rtbBookDetails
             // 
+            this.rtbBookDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbBookDetails.Location = new System.Drawing.Point(12, 12);
             this.rtbBookDetails.Name = "rtbBookDetails";
-            this.rtbBookDetails.Size = new System.Drawing.Size(980, 355);
+            this.rtbBookDetails.Size = new System.Drawing.Size(975, 355);
             this.rtbBookDetails.TabIndex = 0;
             this.rtbBookDetails.Text = "";
             // 
             // btnAddToShelf
             // 
-            this.btnAddToShelf.Location = new System.Drawing.Point(12, 389);
+            this.btnAddToShelf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnAddToShelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToShelf.Location = new System.Drawing.Point(12, 383);
             this.btnAddToShelf.Name = "btnAddToShelf";
-            this.btnAddToShelf.Size = new System.Drawing.Size(163, 50);
+            this.btnAddToShelf.Size = new System.Drawing.Size(163, 56);
             this.btnAddToShelf.TabIndex = 1;
-            this.btnAddToShelf.Text = "Them vao ke sach";
-            this.btnAddToShelf.UseVisualStyleBackColor = true;
+            this.btnAddToShelf.Text = "Thêm vào kệ sách";
+            this.btnAddToShelf.UseVisualStyleBackColor = false;
             this.btnAddToShelf.Click += new System.EventHandler(this.btnAddToShelf_Click);
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(511, 389);
+            this.progressBar.Location = new System.Drawing.Point(607, 401);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(380, 33);
+            this.progressBar.Size = new System.Drawing.Size(380, 27);
             this.progressBar.TabIndex = 3;
             // 
             // dgvBookShelves
@@ -70,7 +73,7 @@
             this.Column3,
             this.Column1,
             this.Column2});
-            this.dgvBookShelves.Location = new System.Drawing.Point(17, 459);
+            this.dgvBookShelves.Location = new System.Drawing.Point(12, 457);
             this.dgvBookShelves.Name = "dgvBookShelves";
             this.dgvBookShelves.RowHeadersWidth = 51;
             this.dgvBookShelves.RowTemplate.Height = 24;
@@ -103,13 +106,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 735);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(998, 735);
             this.Controls.Add(this.dgvBookShelves);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnAddToShelf);
             this.Controls.Add(this.rtbBookDetails);
             this.Name = "InfoSach";
-            this.Text = "Form2";
+            this.Text = "Thông tin sách";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookShelves)).EndInit();
             this.ResumeLayout(false);
